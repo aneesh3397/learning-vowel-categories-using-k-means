@@ -10,7 +10,7 @@ We see that while the vowels do form clusters, there is a non-trivial amount of 
 
 ![alt text](https://github.com/aneesh3397/learning-vowel-categories-using-k-means/blob/master/vowels_unsegmented.png)
 
-The code uses the KMeans() function available in the scikit-learn package. The cluster centers are initialized according to a list of appropriate cluster centers provided by the professor (good_init.txt). The centers can also be assigned randomly.  
+The code uses the KMeans() function available in the scikit-learn package. The cluster centers are initialized according to a list of appropriate cluster centers provided by the professor (good_init.txt). The centers can also be assigned randomly. The code can be run from terminal by providing the following arguments: 'new_k_means2.py voweldata.txt 10 good_init.txt'
 
 The model returned the following results (using the good_init.txt):
 
