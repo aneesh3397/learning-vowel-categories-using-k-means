@@ -2,7 +2,7 @@
 
 Children are exposed to a variety of vowels that differ in the way that they sound and in the way that they are produced. How are children able to categorize these sounds into vowel categories? This goal of this project is to see if an unsupervised learning algorithm like k-means can be used to categorize the vowel of English. 
 
-The data used comes from the Peterson/Barney vowel data which consists of f0, f1, f2 and f3 (formants) values for 10 different vowels as produced by 76 speakers of British English. Typically, the f1 and f2 formants provide enough information to categorize the vowels into their correct identities. The image below plots the vowels on the basis of their f1 and f2 values and are categorized into their identities by color. 
+The data used comes from the Peterson/Barney vowel data which consists of f0, f1, f2 and f3 (formants) values for 10 different vowels as produced by 76 speakers of British English. This data can be found in the file voweldata.txt. Typically, the f1 and f2 formants provide enough information to categorize the vowels into their correct identities. The image below plots the vowels on the basis of their f1 and f2 values and are categorized into their identities by color. 
 
 ![alt text](https://github.com/aneesh3397/learning-vowel-categories-using-k-means/blob/master/vowels.png)
 
