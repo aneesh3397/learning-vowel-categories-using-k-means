@@ -20,6 +20,7 @@ else:
     textname = sys.argv[1]
     n = int(sys.argv[2])
 
+#reading in vowel data:
 f = open(textname,'r')
 
 v_list = f.read()
@@ -28,24 +29,16 @@ s = v_list.split('\n')
 f_list = []
 identity = []
 
+#extracting f1 and f2 values:
 for i in range(0,len(s)):
     split = s[i].split('\t')
-
-    if(split[0]=='1'):
-        f1 = int(split[4]) 
-        f2 = int(split[5]) 
-        
-    if(split[0]=='3' and int(split[4])>750 and int(split[5])>1000):
-        f1 = int(split[4]) 
-        f2 = int(split[5])
-        
-    else:
-        f1 = int(split[4]) 
-        f2 = int(split[5]) 
+    f1 = int(split[4]) 
+    f2 = int(split[5])   
     f_list.append((f1,f2))
     identity.append(int(split[2]))
 
-    
+
+#reading in initialization file:
 f = open(init_file,'r')
 init = f.read()
 s2 = init.split('\n')
@@ -58,6 +51,8 @@ for i in range(0,10):
     
 
 init_final = np.asarray(init_list)
+
+print(init_final)
     
 
 means = []
@@ -65,18 +60,16 @@ means = []
 for i in range(0,len(init_list)):
   means.append((int(init_list[i][0]),int(init_list[i][1])))
   
-      
-f1 = []
-f2 = []
-x = []
+  
+#compiling data
+final_data = []
     
 for i in range(0,len(s)):
-    f1.append(f_list[i][0])
-    f2.append(f_list[i][1])
-    x.append((f_list[i][0],f_list[i][1]))
+    final_data.append((f_list[i][0],f_list[i][1]))
      
 
-kmeans = KMeans(n_clusters=n, init = init_final, max_iter=3000).fit(x)
+#running k-means
+kmeans = KMeans(n_clusters=n, init = init_final, max_iter=3000).fit(final_data)
 print(kmeans.cluster_centers_,'\n' )
 
 
@@ -84,8 +77,8 @@ labels = kmeans.labels_
 
 f = open("points.txt", "w")
 
-for i in range(0,len(x)):
-    f.write(str(x[i][0])+'   '+ str(x[i][1])+'   '+str(labels[i])+'\n')
+for i in range(0,len(final_data)):
+    f.write(str(final_data[i][0])+'   '+ str(final_data[i][1])+'   '+str(labels[i])+'\n')
 
 means_list = kmeans.labels_.tolist()
 
@@ -97,6 +90,7 @@ for i in range(0,len(s)):
 
 combos = list(itertools.combinations(pairs, 2))
 
+#calculating precision recall and F-score:
 
 TP = TN = FP = FN = 0
 
