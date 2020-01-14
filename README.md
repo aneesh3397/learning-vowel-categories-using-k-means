@@ -39,7 +39,7 @@ Before we attempt to cluster these data points into our vowel categories, let's 
 
 <iframe src="docs/vowels.html"
     sandbox="allow-same-origin allow-scripts"
-    width="100%"
+    width="50%"
     height="500"
     scrolling="no"
     seamless="seamless"
