@@ -37,7 +37,7 @@ The model scores 70.0657%. Incorporating f0 and f3 formant values increases this
 
 Before we attempt to cluster these data points into our vowel categories, let's see what the data looks like in a 2d space, plotting the f1 and f2 values:
 
-<iframe src="vowels.html"
+<iframe src="docs/vowels.html"
     sandbox="allow-same-origin allow-scripts"
     width="200%"
     height="500"
