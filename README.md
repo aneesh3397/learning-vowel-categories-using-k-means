@@ -5,7 +5,7 @@ Vowels in particular can be difficult, since compared to consonants, they have l
 The data for this project comes from a rather old paper, Peterson & Barney 1952, and consists of measurements of four acoustic features, F0, F1, F2 and F3 values, for two repetitions of 10 different vowels by 76 speakers of British English. There are 1520 data points, each containing the following features; speaker type (male,female,child), speaker number (unique id for each participant), vowel identity (true vowel category) and the aforementioned f0, f1, f2 and f3 formant values. The data looks like this:
 
 <p align="center">
-  <img src="https://github.com/aneesh3397/unsupervised-learning-of-vowel-categories/blob/master/docs/header.png" style="display: block; margin: auto;" height="150" width="350"/>
+  <img src="docs/header.png" style="display: block; margin: auto;" height="150" width="350"/>
 </p>
 
 Our task now is to use the available features to predict the true vowel category for each data point. We impose the constraint of using unsupervised methods to achieve this to simulate the problem as it exists for children; they don't get feedback (labeled data) on whether or not they have correctly identified a vowel. In fact, a simple logistic regression model can correctly classify data points with about 70% accuracy, using just the f1 and f2 formant values:
