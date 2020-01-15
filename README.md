@@ -1,5 +1,3 @@
-# Unsupervised learning of vowel categories
-
 The learning of a language's phonetic inventory can be a tricky problem for children to figre out, and more so for machines.
 Phonemes, which are units of sound (for example the /t/ sound at the begining of 'tree') are identified by their 'place of articulation' and 'manner of articulation'. For more see: https://en.wikipedia.org/wiki/International_Phonetic_Alphabet_chart.
 Vowels in particular can be difficult, since compared to consonants, they have less identifying features. 
