@@ -54,8 +54,11 @@ kmeans_clusters_2d = kmeans_2d.labels_
 This leads to the following results:
 
 precision: 0.34588481999605936
+
 recall: 0.4283112582781457
+
 f_score: 0.3827101857763521 
+
 
 Not too impressive. We do however have more features at our disposal. Let's take a look at what the space looks like when we break our data up by speaker type:
 
