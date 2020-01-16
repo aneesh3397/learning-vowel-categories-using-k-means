@@ -36,7 +36,7 @@ The model scores 70.0657%. Incorporating f0 and f3 formant values increases this
 Before we attempt to cluster these data points into our vowel categories, let's see what the data looks like in a 2d space, plotting the f1 and f2 values:
 
 <p align="center">
-  <img src="vowel_1.html" style="display: block; margin: auto;" height="150" width="350"/>
+  <img src="vowel_1.png" style="display: block; margin: auto;" height="150" width="350"/>
 </p>
 
 We see that while the clusters show some seperation, the overlap is certainly not trivial. We can attempt to cluster these points into out 10 vowel categories using k-means (we are making a assumption here that we know how many vowel categories there are; children figure this out by themselves): 
