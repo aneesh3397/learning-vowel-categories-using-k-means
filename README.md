@@ -5,7 +5,7 @@ Vowels in particular can be difficult, since compared to consonants, they have l
 The data for this project comes from a rather old paper, Peterson & Barney 1952, and consists of measurements of four acoustic features, F0, F1, F2 and F3 values, for two repetitions of 10 different vowels by 76 speakers of British English. There are 1520 data points, each containing the following features; speaker type (male,female,child), speaker number (unique id for each participant), vowel identity (true vowel category) and the aforementioned f0, f1, f2 and f3 formant values. The data looks like this:
 
 <p align="center">
-  <img src="docs/header.png" style="display: block; margin: auto;" height="150" width="350"/>
+  <img src="header.png" style="display: block; margin: auto;" height="150" width="350"/>
 </p>
 
 Our task now is to use the available features to predict the true vowel category for each data point. We impose the constraint of using unsupervised methods to achieve this to simulate the problem as it exists for children; they don't get feedback (labeled data) on whether or not they have correctly identified a vowel. In fact, a simple logistic regression model can correctly classify data points with about 70% accuracy, using just the f1 and f2 formant values:
@@ -35,14 +35,9 @@ The model scores 70.0657%. Incorporating f0 and f3 formant values increases this
 
 Before we attempt to cluster these data points into our vowel categories, let's see what the data looks like in a 2d space, plotting the f1 and f2 values:
 
-<iframe src="docs/vowels_1.html"
-    sandbox="allow-same-origin allow-scripts"
-    width="850"
-    height="450"
-    scrolling="no"
-    seamless="seamless"
-    frameborder="0">
-</iframe>
+<p align="center">
+  <img src="vowel_1.html" style="display: block; margin: auto;" height="150" width="350"/>
+</p>
 
 We see that while the clusters show some seperation, the overlap is certainly not trivial. We can attempt to cluster these points into out 10 vowel categories using k-means (we are making a assumption here that we know how many vowel categories there are; children figure this out by themselves): 
 
@@ -62,15 +57,9 @@ f_score: 0.3827101857763521
 
 Not too impressive. We do however have more features at our disposal. Let's take a look at what the space looks like when we break our data up by speaker type:
 
-<iframe src="docs/vowels_2.html"
-    sandbox="allow-same-origin allow-scripts"
-    width="850"
-    height="450"
-    scrolling="no"
-    seamless="seamless"
-    frameborder="0">
-</iframe>
-
+<p align="center">
+  <img src="vowel_2.png" style="display: block; margin: auto;" height="150" width="350"/>
+</p>
 
 
 
